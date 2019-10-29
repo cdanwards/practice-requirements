@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <h1>Practice App</h1>
+  <span class="spacer"></span>
+  <button
+    mat-raised-button
+    color="accent"
+    class="mr-sm"
+    (click)="onLoadUsers()"
+  >
+    All Emails
+  </button>
+  <button
+    mat-raised-button
+    color="accent"
+    class="mr-sm"
+    (click)="onLoadAddUser()"
+  >
+    Add Email
+  </button>
+  <button mat-raised-button color="accent" (click)="onLoadLazy()">
+    Lazy Loaded
+  </button>
+</mat-toolbar>

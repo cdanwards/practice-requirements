@@ -1,0 +1,10 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.m-sm {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+}

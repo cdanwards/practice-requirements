@@ -1,0 +1,17 @@
+<div class="m-sm1">
+  <button
+    mat-raised-button
+    color="primary"
+    class="m-sm"
+    (click)="onLoadAddUser()"
+  >
+    Add User
+  </button>
+  <mat-list>
+    <mat-list-item *ngFor="let user of users">
+      <h4>{{ user.emailAddress }}</h4>
+      <span class="spacer"></span>
+      <p>{{ user.emailTypeId }}</p>
+    </mat-list-item>
+  </mat-list>
+</div>

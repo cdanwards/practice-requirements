@@ -1,0 +1,48 @@
+<div class="m-sm1 form-group w-50">
+  <h2 class="m-sm1">Add New User</h2>
+  <form
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    (ngSubmit)="onSubmit()"
+    [formGroup]="userForm"
+  >
+    <mat-form-field class="m-sm field" appearance="fill">
+      <mat-label>Email Address</mat-label>
+      <input type="text" formControlName="emailAddress" matInput />
+    </mat-form-field>
+    <mat-radio-group
+      class="field"
+      formControlName="isPrimary"
+      fxLayout="column"
+      fxLayoutAlign="center start"
+    >
+      <mat-label class="m-sm">Is this your primary email?</mat-label>
+      <div class="field">
+        <mat-radio-button class="m-sm" value="true">Yes</mat-radio-button>
+        <mat-radio-button class="m-sm" value="false">No</mat-radio-button>
+      </div>
+    </mat-radio-group>
+    <mat-form-field class="field m-sm" appearance="fill">
+      <mat-label>Select an email type:</mat-label>
+      <mat-select formControlName="emailTypeId">
+        <mat-option *ngFor="let typeId of typeIds" [value]="typeId">
+          {{ typeId }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="field m-sm" appearance="fill">
+      <mat-label>Description:</mat-label>
+      <textarea type="textarea" formControlName="description" matInput>
+      </textarea>
+    </mat-form-field>
+  </form>
+
+  <button
+    mat-raised-button
+    color="accent"
+    class="w-90 m-sm1"
+    (click)="onSubmit()"
+  >
+    Add Email
+  </button>
+</div>
